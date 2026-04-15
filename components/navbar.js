@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 
-
 export default function NavBar() {
   const navLocations =  [
         {"name":"Home", "href":"/"},
@@ -12,7 +11,7 @@ export default function NavBar() {
     ]
  
   return (
-  <div className='min-h-full flex flex-row justify-center'>
+  <div>
         {
         navLocations.map(
             (item) => <Link href={item.href} key={item.name}>

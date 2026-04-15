@@ -25,13 +25,13 @@
 }
 
 .nav-button {
-  @apply bg-blue-t4t hover:bg-blue-700 text-pink-t4t font-bold py-2 px-4 rounded-full
+  @apply bg-blue-t4t hover:bg-blue-700 text-pink-t4t font-bold py-2 px-4 rounded-full m-8 text-3xl
 }
 
-body {
-  background: var(--background);
+.page-content {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   align-items: center;
 }
+
