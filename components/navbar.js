@@ -15,9 +15,10 @@ export default function NavBar() {
   <div className='min-h-full flex flex-row justify-center'>
         {
         navLocations.map(
-            (item) => <button className='nav-button' key={item.name}>
-                        <Link href={item.href} key={item.name}>{item.name}</Link>
-                      </button>
+            (item) => <Link href={item.href} key={item.name}>
+                        <button className='nav-button' key={item.name}>{item.name}</button>
+                      </Link>
+
                 )
             }
   </div>
