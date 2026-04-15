@@ -15,16 +15,13 @@
 }
 
 .background-image {
-  background-image: url(./assets/background_icons.png);
+  background-image: url(../public/background_icons.png);
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  /* height: 100vh; */
+  /* text-align: center; */
+  /* padding: 0;
+  margin: 0; */
 }
 
 .nav-button {
@@ -35,4 +32,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
 }
