@@ -6,10 +6,10 @@ export default function Header() {
  
   return (
     <div>
-        <div className='flex flex-row justify-end'>
+        <div className='flex flex-row justify-end '>
             <Image
-                src="/header.png"
-                width={1920}
+                src="/header_lg.bmp"
+                width={1921}
                 height={1080}
                 alt="Picture of the author"
             ></Image>
