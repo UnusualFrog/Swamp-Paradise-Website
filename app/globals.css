@@ -50,3 +50,13 @@
   justify-content: center;
   align-items: center;
 }
+
+/* BLOG */
+.main_tower_in {
+  background-color: var(--pink-shadow);
+  width: 20%;
+  height: 100%;
+  flex-shrink: 1;
+
+
+}
