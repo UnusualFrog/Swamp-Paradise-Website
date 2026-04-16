@@ -24,7 +24,7 @@
 }
 
 .nav-button {
-  @apply bg-blue-t4t hover:bg-blue-700 text-pink-t4t font-bold py-2 px-15 rounded-full m-4 text-3xl
+  @apply bg-blue-t4t hover:bg-blue-700 text-pink-t4t font-bold py-2 px-15 rounded-full m-4 text-3xl;
 }
 
 .divider{
@@ -51,12 +51,26 @@
   align-items: center;
 }
 
-/* BLOG */
-.main_tower_in {
+/* ====== BLOG ====== */
+.main-tower-main {
+  @apply bg-pink-t4t w-210  ml-40;
+}
+
+.side-tower-main {
+  @apply bg-pink-t4t w-80  ml-20;
+}
+
+.invis-tower {
+  @apply h-20 w-70 
+}
+
+/* .main-tower-shadow {
+  @apply bg-pink-t4t w-80 grow ml-20;
+} */
+
+.side-tower-shadow {
   background-color: var(--pink-shadow);
   width: 20%;
   height: 100%;
   flex-shrink: 1;
-
-
 }
