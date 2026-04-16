@@ -11,11 +11,11 @@ export default function NavBar() {
     ]
  
   return (
-  <div>
+  <div className=''>
         {
         navLocations.map(
-            (item) => <Link href={item.href} key={item.name}>
-                        <button className='nav-button' key={item.name}>{item.name}</button>
+            (item) => <Link className='nav-button' href={item.href} key={item.name}>
+                        <button key={item.name}>{item.name}</button>
                       </Link>
 
                 )
