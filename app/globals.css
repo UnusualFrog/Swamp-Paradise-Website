@@ -6,7 +6,8 @@
   --background: #aab2ff;
   --foreground: #1c1665;
   --pink: #eca0ff;
-  --pink-shadow:#d490e6
+  --pink-shadow:#d490e6;
+  --transparent: rgba(0,0,0,0.5);
 }
 
 @theme {
@@ -52,25 +53,31 @@
 }
 
 /* ====== BLOG ====== */
-.main-tower-main {
+.grid-container {
+  display: grid;
+  /* grid-template-columns: [c1-start] 10% [c1-end] [c2-start] 70% [c2-end] [c3-start] 20% [c3-end] [c4-start] 20% [c4-end] [c5-start] 20% [c5-end]; */
+  grid-template-rows: [row1-start] 100% [row1-end];
+}
+
+/* .main-tower-main {
   @apply bg-pink-t4t w-210  ml-40;
-}
+} */
 
-.side-tower-main {
+/* .side-tower-main {
   @apply bg-pink-t4t w-80  ml-20;
-}
+} */
 
-.invis-tower {
+/* .invis-tower {
   @apply h-20 w-70 
-}
+} */
 
 /* .main-tower-shadow {
   @apply bg-pink-t4t w-80 grow ml-20;
 } */
 
-.side-tower-shadow {
+/* .side-tower-shadow {
   background-color: var(--pink-shadow);
   width: 20%;
   height: 100%;
   flex-shrink: 1;
-}
+} */
