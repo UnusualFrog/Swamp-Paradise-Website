@@ -14,7 +14,8 @@ export default function Header() {
                 className='header-image'
                 loading='eager'
             ></Image>
-            <div className="flex whitespace-nowrap justify-end h-6 mt-6 bg-pink-t4t">
+            {/* <div className="flex whitespace-nowrap justify-end h-6 mt-6 bg-pink-t4t"> */}
+            <div className="nav-bar">
                 <div className='-mt-2'>
                     <Navbar></Navbar>
                 </div>
