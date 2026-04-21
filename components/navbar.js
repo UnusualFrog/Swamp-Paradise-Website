@@ -14,7 +14,7 @@ export default function NavBar() {
   <div className=''>
         {
         navLocations.map(
-            (item) => <Link className='nav-button' href={item.href} key={item.name}>
+            (item) => <Link className='blue-button' href={item.href} key={item.name}>
                         <button key={item.name}>{item.name}</button>
                       </Link>
 

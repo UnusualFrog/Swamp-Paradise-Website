@@ -55,7 +55,7 @@
   gap: 0px;
 }
 
-.nav-button {
+.blue-button {
   /* Inline tailwind used for hover */
   @apply bg-blue-t4t hover:bg-blue-700 text-pink-t4t font-bold py-2 px-10 rounded-full mx-2 text-3xl;
 }
@@ -70,8 +70,6 @@
   width: 100%;
   height: auto;
 }
-
-
 
 /* ====== BLOG ====== */
 
@@ -125,16 +123,30 @@
 }
 
 .pfp {
-  margin: 10% 0% 0% 0%;
+  width: 70%;
+  margin: 10% 0% 5% 0%;
   border: 10px solid var(--green-light)
+}
+
+.pronoun-button{
+  text-align: left;
+  background-color: var(--foreground);
+  color: var(--pink);
+  font-weight: 700;
+  padding: 2px 14px 2px 14px;
+  font-size: 1.5rem;
+  width: 70%;
+  border-bottom: 2px solid var(--pink);
+
+  /* @apply bg-blue-t4t text-pink-t4t font-bold py-2 px-14 mt-10 text-2xl; */
 }
 
 .tower-bio-content-value {
   background-color: var(--green-light);
-  width: 75%;
-  margin: 10% 0% 0% 0%;
+  width: 70%;
+  margin: 5% 0% 5% 0%;
 }
 
 .tower-bio-content-text {
-  padding: 15px
+  padding: 5px 15px 5px 15px;
 }
