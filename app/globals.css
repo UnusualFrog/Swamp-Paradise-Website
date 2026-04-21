@@ -2,6 +2,13 @@
 @import "tailwindcss";
 
 /* ===== Global Styles ===== */
+@font-face {
+	font-family: 'Typewriter-text-regular';
+	src: url('../font/cmu.typewriter-text-regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 :root {
   --background: #aab2ff;
   --foreground: #1c1665;
@@ -19,6 +26,11 @@
   --color-pink-shadow-t4t: #d490e6;
   --color-green-light: #cbffe8;
   --color-green-dark: #84ffc9;
+}
+
+.blue-button {
+  /* Inline tailwind used for hover */
+  @apply bg-blue-t4t hover:bg-blue-700 text-pink-t4t font-bold py-2 px-10 rounded-full mx-2 text-3xl;
 }
 
 /* ====== Layout Styles ====== */
@@ -53,11 +65,6 @@
   align-items: center;
   align-content: stretch;
   gap: 0px;
-}
-
-.blue-button {
-  /* Inline tailwind used for hover */
-  @apply bg-blue-t4t hover:bg-blue-700 text-pink-t4t font-bold py-2 px-10 rounded-full mx-2 text-3xl;
 }
 
 .divider{
@@ -125,7 +132,7 @@
 .pfp {
   width: 70%;
   margin: 10% 0% 5% 0%;
-  border: 10px solid var(--green-light)
+  border: 10px solid var(--green-light);
 }
 
 .pronoun-button{
@@ -134,11 +141,9 @@
   color: var(--pink);
   font-weight: 700;
   padding: 2px 14px 2px 14px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 70%;
   border-bottom: 2px solid var(--pink);
-
-  /* @apply bg-blue-t4t text-pink-t4t font-bold py-2 px-14 mt-10 text-2xl; */
 }
 
 .tower-bio-content-value {
