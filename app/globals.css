@@ -114,15 +114,27 @@
 
 .tower-bio-content-base {
   background-color: var(--green-dark);
-  flex-basis: 95%;
-  height: 10%;
+  flex-basis: 70%;
+  height: fit-content;
   margin-top: 10%;
-  transform: translate(15%, 0px);
+  transform: translate(15%, 0%);
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .pfp {
+  margin: 10% 0% 0% 0%;
   border: 10px solid var(--green-light)
+}
+
+.tower-bio-content-value {
+  background-color: var(--green-light);
+  width: 75%;
+  margin: 10% 0% 0% 0%;
+}
+
+.tower-bio-content-text {
+  padding: 15px
 }

@@ -15,11 +15,18 @@ export default function Home() {
                         alt="Picture of the author"
                         className="pfp" 
                     ></Image>
+                    <div className='tower-bio-content-value'>
+                        <p className='tower-bio-content-text'>
+                            Hi! My name is Julia (Unusual Frog), this is my blog. Here you can expect to find
+                            my thoughts on birds, frogs and other critters, alongside media reviews,
+                            and the occasional ramblings of a mad-woman.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className='tower-post'>
                 <div className='tower-blog-shadow'></div>
-                <div>n</div>
+                <div>edeedee</div>
             </div>
         </div>
     </div>
