@@ -7,6 +7,8 @@
   --foreground: #1c1665;
   --pink: #eca0ff;
   --pink-shadow:#d490e6;
+  --green-light: #cbffe8;
+  --green-dark: #84ffc9;
   --transparent: rgba(0,0,0,0.5);
 }
 
@@ -15,6 +17,8 @@
   --color-blue-t4t: #1c1665;
   --color-pink-t4t: #eca0ff;
   --color-pink-shadow-t4t: #d490e6;
+  --color-green-light: #cbffe8;
+  --color-green-dark: #84ffc9;
 }
 
 /* ====== Layout Styles ====== */
@@ -71,7 +75,7 @@
 
 /* ====== BLOG ====== */
 
-.flex-container {
+.container-blog {
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -82,28 +86,43 @@
   gap: 0px;
 }
 
-.flex-item-1 {
+.tower-bio {
   background-color: var(--pink);
   flex-basis: 25%;
   height: 100%;
   display: flex;
 }
 
-.flex-item-2 {
+.tower-post {
   background-color: var(--pink);
   flex-basis: 55%;
   height: 100%;
   display: flex;
 }
 
-.flex-sub-item-1 {
+.tower-bio-shadow {
   background-color: var(--pink-shadow);
   flex-basis: 25%;
-  height: 100%
+  height: 100%;
 }
 
-.flex-sub-item-2 {
+.tower-blog-shadow {
   background-color: var(--pink-shadow);
   flex-basis: 25%;
-  height: 100%
+  height: 100%;
+}
+
+.tower-bio-content-base {
+  background-color: var(--green-dark);
+  flex-basis: 95%;
+  height: 10%;
+  margin-top: 10%;
+  transform: translate(15%, 0px);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pfp {
+  border: 10px solid var(--green-light)
 }
