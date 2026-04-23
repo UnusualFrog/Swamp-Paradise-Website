@@ -9,7 +9,8 @@ const myFont = localFont({
 
 // Combine global.css style with local font import
 const pronoun_btn_style = 'pronoun-button ' + myFont.className
-const text_style = 'tower-bio-content-text ' + myFont.className
+const bio_text_style = 'tower-bio-content-text ' + myFont.className
+const blog_header_text_style = 'tower-blog-header-text ' + myFont.className
 
 export default function Home() {
    return (
@@ -29,7 +30,7 @@ export default function Home() {
                     <button disabled={true} className={pronoun_btn_style}>♀️ - She/Her</button>
                     <button disabled={true} className={pronoun_btn_style}>🖥️ - Unusual Frog</button>
                     <div className='tower-bio-content-value'>
-                        <p className={text_style}>
+                        <p className={bio_text_style}>
                             Hi! My name is Julia, welcome to my blog. Here you can expect to find
                             my thoughts on birds, frogs and other critters, alongside media reviews,
                             and the occasional ramblings of a mad-woman.
@@ -37,9 +38,14 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className='tower-post'>
+            <div className='tower-blog'>
                 <div className='tower-blog-shadow'></div>
-                <div>edeedeeeeeeefeeeeeeeeeeee</div>
+                <div className='tower-blog-content-col'>
+                    <div className='tower-blog-header'>
+                        <p className={blog_header_text_style}>=== BLOG ===</p>
+                    </div>
+                    eeeeeeeeee
+                </div>
             </div>
         </div>
     </div>

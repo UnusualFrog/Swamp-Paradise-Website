@@ -91,6 +91,7 @@
   gap: 0px;
 }
 
+/* --- Bio Content --- */
 .tower-bio {
   background-color: var(--pink);
   flex-basis: 25%;
@@ -98,20 +99,7 @@
   display: flex;
 }
 
-.tower-post {
-  background-color: var(--pink);
-  flex-basis: 55%;
-  height: 100%;
-  display: flex;
-}
-
 .tower-bio-shadow {
-  background-color: var(--pink-shadow);
-  flex-basis: 25%;
-  height: 100%;
-}
-
-.tower-blog-shadow {
   background-color: var(--pink-shadow);
   flex-basis: 25%;
   height: 100%;
@@ -155,3 +143,47 @@
 .tower-bio-content-text {
   padding: 5px 15px 5px 15px;
 }
+
+/* --- Blog Content --- */
+
+.tower-blog {
+  background-color: var(--pink);
+  flex-basis: 55%;
+  height: 100%;
+  display: flex;
+}
+
+.tower-blog-shadow {
+  background-color: var(--pink-shadow);
+  flex-basis: 25%;
+  height: 100%;
+}
+
+.tower-blog-content-col {
+  /* background-color: var(--green-dark); */
+  flex-basis: 100%;
+  /* height: fit-content; */
+  /* margin-top: 10%; */
+  transform: translate(3%, 0%);
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.tower-blog-header {
+   background-color: var(--green-light);
+   height: 180px;
+   width: 100%;
+   transform: translate(0%, -35%);
+   border: 15px solid var(--green-dark);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.tower-blog-header-text {
+  @apply text-8xl text-center mt-4 text-nowrap
+}
+
+
