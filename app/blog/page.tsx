@@ -11,6 +11,9 @@ const myFont = localFont({
 const pronoun_btn_style = 'pronoun-button ' + myFont.className
 const bio_text_style = 'tower-bio-content-text ' + myFont.className
 const blog_header_text_style = 'tower-blog-header-text ' + myFont.className
+const blog_post_body_style = 'tower-blog-post-text ' + myFont.className
+const blog_post_date_style = 'tower-blog-date-text ' + myFont.className
+const blog_post_tag_style = 'tower-blog-tags-text ' + myFont.className
 
 export default function Home() {
    return (
@@ -44,7 +47,122 @@ export default function Home() {
                     <div className='tower-blog-header'>
                         <p className={blog_header_text_style}>=== BLOG ===</p>
                     </div>
-                    eeeeeeeeee
+                    <div className='tower-blog-post-base'>
+                        <div className='tower-blog-post-content'>
+                            <p className={blog_post_body_style}>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora 
+                                torquent per conubia nostra inceptos himenaeos.eed
+
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora 
+                                torquent per conubia nostra inceptose himeeeeeenaeos. eedee
+                            </p>
+                        </div>
+                        <div className='tower-blog-post-tags'>
+                            <p className={blog_post_date_style}>10/10/2026</p>
+                            <p className={blog_post_tag_style}>#sad 😟</p>
+                            <p className={blog_post_tag_style}>#mind-blown 🤯</p>
+                            <p className={blog_post_tag_style}>#alien👽</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                        </div>
+                    </div>
+                    <div className='tower-blog-post-base'>
+                        <div className='tower-blog-post-content'>
+                            <p className={blog_post_body_style}>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora 
+                                torquent per conubia nostra inceptos himenaeos.eed
+
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora 
+                                torquent per conubia nostra inceptose himeeeeeenaeos. eedee
+                            </p>
+                        </div>
+                        <div className='tower-blog-post-tags'>
+                            <p className={blog_post_date_style}>10/10/2026</p>
+                            <p className={blog_post_tag_style}>#sad 😟</p>
+                            <p className={blog_post_tag_style}>#mind-blown 🤯</p>
+                            <p className={blog_post_tag_style}>#alien👽</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                        </div>
+                    </div>
+                    <div className='tower-blog-post-base'>
+                        <div className='tower-blog-post-content'>
+                            <p className={blog_post_body_style}>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora 
+                                torquent per conubia nostra inceptos himenaeos.eed
+
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora 
+                                torquent per conubia nostra inceptose himeeeeeenaeos. eedee
+                            </p>
+                        </div>
+                        <div className='tower-blog-post-tags'>
+                            <p className={blog_post_date_style}>10/10/2026</p>
+                            <p className={blog_post_tag_style}>#sad 😟</p>
+                            <p className={blog_post_tag_style}>#mind-blown 🤯</p>
+                            <p className={blog_post_tag_style}>#alien👽</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                        </div>
+                    </div>
+                    <div className='tower-blog-post-base'>
+                        <div className='tower-blog-post-content'>
+                            <p className={blog_post_body_style}>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora 
+                                torquent per conubia nostra inceptos himenaeos.eed
+
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
+                                mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam 
+                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
+                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+                                Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora 
+                                torquent per conubia nostra inceptose himeeeeeenaeos. eedee
+                            </p>
+                        </div>
+                        <div className='tower-blog-post-tags'>
+                            <p className={blog_post_date_style}>10/10/2026</p>
+                            <p className={blog_post_tag_style}>#sad 😟</p>
+                            <p className={blog_post_tag_style}>#mind-blown 🤯</p>
+                            <p className={blog_post_tag_style}>#alien👽</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                            <p className={blog_post_tag_style}>#kitty😾</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

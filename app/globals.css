@@ -160,14 +160,10 @@
 }
 
 .tower-blog-content-col {
-  /* background-color: var(--green-dark); */
   flex-basis: 100%;
-  /* height: fit-content; */
-  /* margin-top: 10%; */
   transform: translate(3%, 0%);
   display:flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -177,6 +173,7 @@
    width: 100%;
    transform: translate(0%, -35%);
    border: 15px solid var(--green-dark);
+
    display: flex;
    justify-content: center;
    align-items: center;
@@ -186,4 +183,43 @@
   @apply text-8xl text-center mt-4 text-nowrap
 }
 
+.tower-blog-post-base {
+  background-color: var(--green-dark);
+  height: fit-content;
+  width: 100%;
+  margin-top: 5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tower-blog-post-content {
+  background-color: var(--green-light);
+  height: fit-content;
+  width: 96%;
+  margin-top: 2%
+}
+
+.tower-blog-post-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+  width: 96%;
+  margin-top: 2px;
+  height: fit-content;
+}
+
+.tower-blog-post-text {
+  @apply text-lg text-left m-2 text-wrap
+}
+
+.tower-blog-date-text {
+  @apply text-xl text-left p-1 my-3 mr-1 text-wrap font-bold border-2 border-blue-t4t bg-green-light
+}
+
+.tower-blog-tags-text {
+  @apply text-lg text-center p-1 my-3 mr-1 text-wrap font-bold border-2 border-blue-t4t bg-green-light
+}
 
