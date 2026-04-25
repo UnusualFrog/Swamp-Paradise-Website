@@ -220,6 +220,6 @@
 }
 
 .tower-blog-tags-text {
-  @apply text-lg text-center p-1 my-3 mr-1 text-wrap font-bold border-2 border-blue-t4t bg-green-light
+  @apply text-lg text-center p-1 my-3  text-wrap font-bold border-2 border-blue-t4t bg-green-light
 }
 
