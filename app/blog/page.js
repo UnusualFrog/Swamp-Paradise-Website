@@ -31,8 +31,37 @@ const example_blog_data = {
         main_content: "KITTY",
         date_posted: "11/22/1996",
         tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
+    },
+    "4": {
+        main_content: "KITTY KITTYKITTYKITTYKITTYKITTYKITTYKITTYKITTY",
+        date_posted: "11/22/1996",
+        tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
     }
 }
+
+const example_blog_data_arr = [
+    {
+        main_content: "FUCKLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.eed Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora torquent per conubia nostra inceptose himeeeeeenaeos. eedee",
+        date_posted: "02/02/2026",
+        tags: ["#sad 😟", "#mind-blown 🤯", "#alien👽", "#kitty😾", "#kitty😾"]
+    },
+    {
+        main_content: "I FUCKING LOVE MY GIRLFRIEND",
+        date_posted: "11/22/1996",
+        tags: ["#kitty😾"]
+    },
+    {
+        main_content: "KITTY",
+        date_posted: "11/22/1996",
+        tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
+    },
+    {
+        main_content: "KITTY KITTYKITTYKITTYKITTYKITTYKITTYKITTYKITTY",
+        date_posted: "11/22/1996",
+        tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
+    }
+]
+
 
 
 export default function Home() {
@@ -73,7 +102,7 @@ export default function Home() {
                     </div>
                     {/* BLOG POSTS BELOW */}
 
-                    <div className='tower-blog-post-base'>
+                    {/* <div className='tower-blog-post-base'>
                         <div className='tower-blog-post-content'>
                             <p className={blog_post_body_style}>
                                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
@@ -101,11 +130,24 @@ export default function Home() {
                             <p className={blog_post_tag_style}>#kitty😾</p>
                             <p className={blog_post_tag_style}>#kitty😾</p>
                         </div>
-                    </div>
+                    </div> */}
                     
-                    <BlogPost
+
+                    {/* <BlogPost
                         blog_post_data={example_blog_data[1]}
                     ></BlogPost>
+                    <BlogPost
+                        blog_post_data={example_blog_data[2]}
+                    ></BlogPost>
+                    <BlogPost
+                        blog_post_data={example_blog_data[3]}
+                    ></BlogPost> */}
+
+                    {
+                        example_blog_data_arr.map((obj, i) => (
+                            <BlogPost key={i} blog_post_data={obj}></BlogPost>
+                        ))
+                    }
 
 
 

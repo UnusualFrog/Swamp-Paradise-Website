@@ -12,9 +12,6 @@ const blog_post_date_style = 'tower-blog-date-text ' + myFont.className
 const blog_post_tag_style = 'tower-blog-tags-text ' + myFont.className
 
 export default function BlogPost(blog_post_data) {
-  console.log(blog_post_data)
-  console.log(blog_post_data.blog_post_data.main_content)
-
   let main_content = blog_post_data.blog_post_data.main_content
   let date = blog_post_data.blog_post_data.date_posted
   let tags = blog_post_data.blog_post_data.tags
