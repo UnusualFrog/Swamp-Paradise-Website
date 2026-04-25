@@ -36,11 +36,6 @@ export default function BlogPost(blog_post_data) {
               </p>
             ))
           }
-          {/* <p className={blog_post_tag_style}>#sad 😟</p>
-          <p className={blog_post_tag_style}>#mind-blown 🤯</p>
-          <p className={blog_post_tag_style}>#alien👽</p>
-          <p className={blog_post_tag_style}>#kitty😾</p>
-          <p className={blog_post_tag_style}>#kitty😾</p> */}
       </div>
 
   </div>

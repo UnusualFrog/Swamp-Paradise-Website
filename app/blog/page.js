@@ -1,7 +1,9 @@
+import { promises as fs } from 'fs';
 import '../globals.css'; 
 import Image from 'next/image';
 import localFont from 'next/font/local'
 import BlogPost from '../../components/blog_post'
+
 
 // Import Local Font
 const myFont = localFont({
@@ -16,63 +18,28 @@ const blog_post_body_style = 'tower-blog-post-text ' + myFont.className
 const blog_post_date_style = 'tower-blog-date-text ' + myFont.className
 const blog_post_tag_style = 'tower-blog-tags-text ' + myFont.className
 
-const example_blog_data = {
-    "1" : {
-        main_content: "FUCKLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.eed Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora torquent per conubia nostra inceptose himeeeeeenaeos. eedee",
-        date_posted: "02/02/2026",
-        tags: ["#sad 😟", "#mind-blown 🤯", "#alien👽", "#kitty😾", "#kitty😾"]
-    },
-    "2": {
-        main_content: "I FUCKING LOVE MY GIRLFRIEND",
-        date_posted: "11/22/1996",
-        tags: ["#kitty😾"]
-    },
-    "3": {
-        main_content: "KITTY",
-        date_posted: "11/22/1996",
-        tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
-    },
-    "4": {
-        main_content: "KITTY KITTYKITTYKITTYKITTYKITTYKITTYKITTYKITTY",
-        date_posted: "11/22/1996",
-        tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
+export default async function Home() {
+    // Load blog post data from json
+    const file = await fs.readFile(process.cwd() + '/data/blog_posts.json', 'utf8');
+    const data = JSON.parse(file);
+    const blog_post_data = [];
+
+    // Convert from object of objects to array of objects to allow for .map() usage )
+    for (let [key, value] of Object.entries(data)) {
+        blog_post_data.push(value)
     }
-}
 
-const example_blog_data_arr = [
-    {
-        main_content: "FUCKLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.eed Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora torquent per conubia nostra inceptose himeeeeeenaeos. eedee",
-        date_posted: "02/02/2026",
-        tags: ["#sad 😟", "#mind-blown 🤯", "#alien👽", "#kitty😾", "#kitty😾"]
-    },
-    {
-        main_content: "I FUCKING LOVE MY GIRLFRIEND",
-        date_posted: "11/22/1996",
-        tags: ["#kitty😾"]
-    },
-    {
-        main_content: "KITTY",
-        date_posted: "11/22/1996",
-        tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
-    },
-    {
-        main_content: "KITTY KITTYKITTYKITTYKITTYKITTYKITTYKITTYKITTY",
-        date_posted: "11/22/1996",
-        tags: ["#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾", "#kitty😾"]
-    }
-]
-
-
-
-export default function Home() {
    return (
     <div className='h-1000'>
         <div className='container-blog'>
 
             {/* BIO CONTENT (LEFT TOWER) */}
             <div className='tower-bio' >
+                {/* Tower Shadow */}
                 <div className='tower-bio-shadow'></div>
+                {/* Bio Content */}
                 <div className='tower-bio-content-base'>
+                    {/* Profile Picture */}
                     <Image
                         src="/pfp.png"
                         width={200}
@@ -80,9 +47,13 @@ export default function Home() {
                         alt="Picture of the author"
                         className="pfp" 
                     ></Image>
+
+                    {/* Name & Pronoun Labels */}
                     <button disabled={true} className={pronoun_btn_style}>✏️ - Julia</button>
                     <button disabled={true} className={pronoun_btn_style}>♀️ - She/Her</button>
                     <button disabled={true} className={pronoun_btn_style}>🖥️ - Unusual Frog</button>
+                    
+                    {/* Bio Description */}
                     <div className='tower-bio-content-value'>
                         <p className={bio_text_style}>
                             Hi! My name is Julia, welcome to my blog. Here you can expect to find
@@ -90,67 +61,27 @@ export default function Home() {
                             and the occasional ramblings of a mad-woman.
                         </p>
                     </div>
+
                 </div>
             </div>
 
             {/* BLOG CONTENT (RIGHT TOWER) */}
             <div className='tower-blog'>
+                {/* TOWER SHADOW */}
                 <div className='tower-blog-shadow'></div>
+
                 <div className='tower-blog-content-col'>
+                    {/* TOWER HEADER */}
                     <div className='tower-blog-header'>
                         <p className={blog_header_text_style}>=== BLOG ===</p>
                     </div>
+
                     {/* BLOG POSTS BELOW */}
-
-                    {/* <div className='tower-blog-post-base'>
-                        <div className='tower-blog-post-content'>
-                            <p className={blog_post_body_style}>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
-                                mi pretium tellus eduis convallis. Tempus eleo eu aenean sed diam 
-                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
-                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-                                Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora 
-                                torquent per conubia nostra inceptos himenaeos.eed
-
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                                faucibus ex sapien vitae pellentesque sem placerat. In id cursus 
-                                mi pretium tellus duis convallis. Tempus eleo eu aenean sed diam 
-                                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum 
-                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-                                Ut hendrerit semper vel class aptent taciti socioseeeeeeeeequ. Ad litora 
-                                torquent per conubia nostra inceptose himeeeeeenaeos. eedeee
-                            </p>
-                        </div>
-                        <div className='tower-blog-post-tags'>
-                            <p className={blog_post_date_style}>10/10/2026</p>
-                            <p className={blog_post_tag_style}>#sad 😟</p>
-                            <p className={blog_post_tag_style}>#mind-blown 🤯</p>
-                            <p className={blog_post_tag_style}>#alien👽</p>
-                            <p className={blog_post_tag_style}>#kitty😾</p>
-                            <p className={blog_post_tag_style}>#kitty😾</p>
-                        </div>
-                    </div> */}
-                    
-
-                    {/* <BlogPost
-                        blog_post_data={example_blog_data[1]}
-                    ></BlogPost>
-                    <BlogPost
-                        blog_post_data={example_blog_data[2]}
-                    ></BlogPost>
-                    <BlogPost
-                        blog_post_data={example_blog_data[3]}
-                    ></BlogPost> */}
-
                     {
-                        example_blog_data_arr.map((obj, i) => (
+                        blog_post_data.map((obj, i) => (
                             <BlogPost key={i} blog_post_data={obj}></BlogPost>
                         ))
                     }
-
-
-
 
 
 
