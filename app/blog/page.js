@@ -29,6 +29,9 @@ export default async function Home() {
         blog_post_data.push(value)
     }
 
+    // Reverse post order to maintain chronology
+    blog_post_data.reverse()
+
    return (
     <div className='h-1000'>
         <div className='container-blog'>
